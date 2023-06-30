@@ -11,12 +11,12 @@ function mergeTwoSortedArray(arr1, arr2) {
       j++;
     }
   }
-  // - If j is exhausted, push all elements of arr1
+  // If j is exhausted, push all elements of arr1
   while (i < arr1.length) {
     res.push(arr1[i]);
     i++;
   }
-  // -  If i is exhausted, push all elements of arr1
+  //  If i is exhausted, push all elements of arr1
   while (j < arr2.length) {
     res.push(arr2[j]);
     j++;

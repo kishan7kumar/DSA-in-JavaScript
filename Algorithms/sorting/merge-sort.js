@@ -1,8 +1,8 @@
 /**
- * - Merge Sort Methods
- * - Time Complexity is O(n*log(n))
- * - here log(n) comes from the decomposition and n comes the comparisons to perform the merging steps
- * - Space Complexity is O(n)
+ *  Merge Sort Methods
+ *  Time Complexity is O(n*log(n))
+ *  here log(n) comes from the decomposition and n comes the comparisons to perform the merging steps
+ *  Space Complexity is O(n)
  */
 
 function mergeTwoSortedArray(arr1, arr2) {
