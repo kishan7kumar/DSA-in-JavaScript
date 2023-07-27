@@ -81,10 +81,10 @@ class SinglyLinkedList {
     this.head = current.next;
     this.length--;
     if (this.length !== 0) {
-      // * heads automatically get assigned to null but tail doesn't
+      // heads automatically get assigned to null but tail doesn't
       this.tail = null;
     }
-    return current; //*return the popped node
+    return current; //return the popped node
   }
 
   /**
@@ -92,7 +92,7 @@ class SinglyLinkedList {
    */
   unshift(val) {
     let newNode = new Node(val);
-    // *If list is empty
+    // If list is empty
     if (!this.head) {
       this.head = newNode; //*heads points to new node
       this.tail = this.head;
@@ -222,6 +222,7 @@ console.log(list.traverse());
 
 // console.log("\n ---- Popped Node ----");
 // console.log(list.pop());
+
 // console.log("\n ---- Shifted Node ----");
 // console.log(list.unshift(200));
 
@@ -234,11 +235,9 @@ console.log(list.traverse());
 // console.log("\n ---- Inserting Node to List ----");
 // console.log(list.insert(6, 90));
 
-console.log("\n ---- Removing Node to List ----");
+console.log("\n ---- Reversing Node to List ----");
 console.log(list.reverse());
 
 console.log("\n ---- Final List ----");
 console.log(list.traverse());
 
-// console.log("\n ---- List Object ----");
-// console.log(list);
