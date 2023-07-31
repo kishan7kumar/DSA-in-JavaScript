@@ -15,9 +15,9 @@ class Node {
 /* -------------------------------------------------------------------------- */
 /*                              LinkedList Class                              */
 /* -------------------------------------------------------------------------- */
-/** NOTE:- 1. Linked List excel at deletion and insertion when compared to arrays
+/** NOTE: 1. Linked List excel at deletion and insertion when compared to arrays
  *         2. Linked List do not contain built in indexes
- *         3. Foundation for Stacks and Queues 
+ *         3. Foundation for Stacks and Queues
  */
 class SinglyLinkedList {
   constructor() {
@@ -55,6 +55,7 @@ class SinglyLinkedList {
     }
     let current = this.head;
     let newTail = current;
+    // This part below is not a constant time operation
     while (current.next) {
       newTail = current;
       current = current.next;
@@ -240,4 +241,3 @@ console.log(list.reverse());
 
 console.log("\n ---- Final List ----");
 console.log(list.traverse());
-

@@ -1,5 +1,5 @@
-// - It works only on sorted arrays with Time Complexity of O(log(N)) base is 2 
-// - So 2 to the power of steps for N elements
+//  It works only on sorted arrays with Time Complexity of O(log(N)) base is 2 
+//  So 2 to the power of steps for N elements
 
 function binarySearch(arr, value) {
   let leftPointer = 0;

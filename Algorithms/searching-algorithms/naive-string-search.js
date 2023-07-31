@@ -1,4 +1,4 @@
-// - Time Complexity O(N^2)
+// Time Complexity O(N^2)
 function searchIt(mainStr, patternStr) {
   let matchCount = 0;
   for (let i = 0; i < mainStr.length; i++) {
@@ -16,7 +16,7 @@ function searchIt(mainStr, patternStr) {
   return matchCount;
 }
 
-// - Time Complexity O(N)
+//  Time Complexity O(N)
 function searchPatternString(mainStr, patternStr) {
   let matchCount = 0;
   let j = 0;

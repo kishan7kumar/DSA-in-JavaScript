@@ -1,4 +1,4 @@
-// - Basic Algorithm with time complexity O(N)
+//  Basic Algorithm with time complexity O(N)
 
 function linearSearch(arr, value) {
   for (const item in arr) {
