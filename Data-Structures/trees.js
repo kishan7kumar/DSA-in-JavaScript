@@ -1,40 +1,46 @@
 /**
- * TREE:-
- *  - A Data Structure that consists of nodes in a parent/child relationship.
- *  - It is generally inverted i.e. from root to leaves
- *  - Unlike linked list which is linear, each node in tree can point to multiple nodes, making them non-linear.
- *  - Linked list is a special case of tree.
- *  - There are several varieties of trees
- *  - Tree --> Binary Tree --> Binary Search Tree
- *  - A Node cannot point to its sibling, only to its children. So, every node moves away from root node.
- *  - Some Terminology used for Trees are given below:
- *      Root:- The top node in a tree.
- *      Child:- A node directly connected to another node when moving away from the root.
- *      Sibling:- A group of nodes with the same parent.
- *      Leaf:- A node with no children.
- *      Edge:- The connection between one node and another.
- *
- * Application of Tree:-
- * 1. HTMl Dom
- * 2. Network Routing
- * 3. Artificial Intelligence like tic-tac toe game
- * 4. code directory in a computer
- *
- * Big O of BST (!! Not Guaranteed !!):-
- * 1. Insertion - O(log n) As the tree nodes doubles the steps increases by 1
- *    - 2x number of nodes: 1 extra step
- *    - 4x number of nodes: 2 extra step
- *    - 8x number of nodes: 3 extra step
- * 2. Finding - O(log n) same as above
- * Worst Case is when binary tree is like a linked list i.e. all nodes are in one side then it can be O(n)
- *
- * BINARY SEARCH TREE:-
- *  - have at-most (0, 1 or 2) two children per node
- *  - Sorted in an order
- *  - Used to store data that can be compared mostly numbers
- *  - Items less than the parent node are stored on the left side of the tree
- *  - Items greater than the parent node are stored on the right side of the tree
- *  - Above logic is repeated at every child node
+   TREE:-
+    - A Data Structure that consists of nodes in a parent/child relationship.
+    - It is generally inverted i.e. from root to leaves
+    - Unlike linked list which is linear, each node in tree can point to multiple nodes, making them non-linear.
+    - Linked list is a special case of tree.
+    - There are several varieties of trees
+    - Tree --> Binary Tree --> Binary Search Tree
+    - A Node cannot point to its sibling, only to its children. So, every node moves away from root node.
+    - Some Terminology used for Trees are given below:
+        Root:- The top node in a tree.
+        Child:- A node directly connected to another node when moving away from the root.
+        Sibling:- A group of nodes with the same parent.
+        Leaf:- A node with no children.
+        Edge:- The connection between one node and another.
+  
+   BINARY TREE:- 
+   - have at-most (0, 1 or 2) two children per node
+   - Can have values of any type
+   - Items can be stored in any order
+
+   BINARY SEARCH TREE:-
+    - have at-most (0, 1 or 2) two children per node
+    - stored in an order
+    - Used to store data that can be compared mostly numbers
+    - Items less than the parent node are stored on the left side of the tree
+    - Items greater than the parent node are stored on the right side of the tree
+    - Above logic is repeated at every child node
+   
+   Application of Tree:-
+   1. HTMl Dom
+   2. Network Routing
+   3. Artificial Intelligence like tic-tac-toe game
+   4. code directory in a computer
+
+   Big O of BST (!! Not Guaranteed !!):-
+   1. Insertion - O(log n) As the tree no des doubles the steps increases by 1
+      - 2x number of nodes: 1 extra step
+      - 4x number of nodes: 2 extra step
+      - 8x number of nodes: 3 extra step
+   2. Finding - O(log n) same as above
+   Worst Case is when binary tree is like a linked list i.e. all nodes are in one side then it can be O(n)
+
  */
 
 class Node {

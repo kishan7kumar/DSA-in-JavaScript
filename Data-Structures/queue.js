@@ -1,21 +1,21 @@
 /**
- * QUEUE:-
- * A FIFO(First in First Out) data structure (a general concept to be precise) which
- * means the first item added to the queue will be the first item removed from the queue.
- * Also there is no indexing so it can grow large comfortably.
- * Example:- Waiting in human line.
- *
- * Application of Queue:-
- * 1. Online games or rooms to join .
- * 2. background tasks.
- * 3. Uploading resources.
- * 4. Foundation structure for more complex data structures.
- *
- * Big O of Queue:-
- * 1. Insertion - O(1)
- * 2. Remove - O(1)
- * 3. Searching - O(n)
- * 4. Access - O(n)
+  QUEUE:-
+  A FIFO(First in First Out) data structure (a general concept to be precise) which
+  means the first item added to the queue will be the first item removed from the queue.
+  Also there is no indexing so it can grow large comfortably.
+  Example:- Waiting in human line.
+ 
+  Application of Queue:-
+  1. Online games or rooms to join .
+  2. background tasks.
+  3. Uploading resources.
+  4. Foundation structure for more complex data structures.
+ 
+  Big O of Queue:-
+  1. Insertion - O(1)
+  2. Remove - O(1)
+  3. Searching - O(n)
+  4. Access - O(n)
  */
 
 /* -------------------------------------------------------------------------- */
