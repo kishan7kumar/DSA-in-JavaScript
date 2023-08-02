@@ -1,9 +1,11 @@
 /** 
    Binary Heap
-   - Similar to binary search tree
+   - Similar to or a type of binary search tree
    - In MaxBinaryHeap, parent nodes are always larger than child nodes
    - In MinBinaryHeap, parent nodes are always smaller than child nodes
    - No order in between siblings
+   - We always fill the left side first
+   - Not optimized for searching as there is no order maintained
 
     Two Types of Heaps:-
 
@@ -42,6 +44,14 @@
     (also known as bubble-down, percolate-down, sift-down, trickle down, heapify-down, cascade-down, and extract-min/max).
     1. Root replaced with the last element
     2. The last element or the new root is sunk down to its correct position by replacing it with the largest of its children
+
+    Big O Time Complexity:-
+    1. Insertion - O(log n)
+       For 16 nodes/elements... 4 comparisons which is 2^x = 16 so x=4 so steps are 4. So, whenever we double the nodes we increase the step only by 1.
+    2. Removal - O(log n)
+    3. Search - O(n)
+    !!! NOTE: Because in Heap tree we will out left first and then right there is no case like trees where we have long vertical nodes list, so worst case time complexity is still O(log n)
+    
   */
 
 class MaxBinaryHeap {
@@ -54,6 +64,7 @@ class MaxBinaryHeap {
     if (this.values.length !== 0) {
       let index = this.values.length - 1;
       let parentIndex = Math.floor((index - 1) / 2);
+
       while (this.values[index] > this.values[parentIndex]) {
         /* Swap the parent and child element */
         let temp = this.values[index];
@@ -72,6 +83,7 @@ class MaxBinaryHeap {
     /* Swap the root and the last element */
     let maxElement = this.values[0];
     let endElement = this.values.pop();
+    /* This is a bubble up logic */
     if (this.values.length > 0) {
       this.values[0] = endElement;
       let parentIndex = 0;
