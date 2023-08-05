@@ -2,6 +2,7 @@
    TREE:-
     - A Data Structure that consists of nodes in a parent/child relationship.
     - It is generally inverted i.e. from root to leaves
+    - It is a sub-type of Graph where there is only one path between any two nodes.
     - Unlike linked list which is linear, each node in tree can point to multiple nodes, making them non-linear.
     - Linked list is a special case of tree.
     - There are several varieties of trees
