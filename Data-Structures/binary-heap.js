@@ -61,23 +61,24 @@ class MaxBinaryHeap {
 
   insert(val) {
     this.values.push(val);
-    if (this.values.length !== 0) {
-      let index = this.values.length - 1;
-      let parentIndex = Math.floor((index - 1) / 2);
-
-      while (this.values[index] > this.values[parentIndex]) {
-        /* Swap the parent and child element */
-        let temp = this.values[index];
-        this.values[index] = this.values[parentIndex];
-        this.values[parentIndex] = temp;
-        /* Update the index and parentIndex parent moves up*/
-        index = parentIndex;
-        /* Update the parentIndex; search for child up the tree*/
-        parentIndex = Math.floor((index - 1) / 2);
-      }
-    }
+    this.bubbleUp();
     return this.values;
   }
+
+   bubbleUp() {
+      let idx = this.values.length - 1;
+      let element = this.values[idx];
+       while(idx > 0) {
+         /* parent will always be at (n-1)/2 */
+         /* child is at 2n+1 and 2n+2 */
+         let parentIdx = Math.floor((idx - 1)/2);
+         let parent = this.values[parentIdx];
+         if(element <= parent) break;
+         this.values[parentIdx] = element;
+         this.values[idx] = parent;
+         idx = parentIdx;
+       }
+   }
 
   extractMax() {
     /* Swap the root and the last element */
