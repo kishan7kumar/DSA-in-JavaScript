@@ -59,12 +59,18 @@ class MaxBinaryHeap {
     this.values = [];
   }
 
+/** We have to make sure two things
+ *  1. Always ensure that your Heap is a complete binary tree
+ *  2. All parent.val <= children if its a min heap
+ */
   insert(val) {
+    /** To maintain 1st condition element is added always at the last in heap */ 
     this.values.push(val);
     this.bubbleUp();
     return this.values;
   }
 
+   /** This process is also called Heapify */
    bubbleUp() {
       let idx = this.values.length - 1;
       let element = this.values[idx];
