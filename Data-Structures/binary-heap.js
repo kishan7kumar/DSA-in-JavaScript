@@ -59,32 +59,32 @@ class MaxBinaryHeap {
     this.values = [];
   }
 
-/** We have to make sure two things
- *  1. Always ensure that your Heap is a complete binary tree
- *  2. All parent.val <= children if its a min heap
- */
+  /** We have to make sure two things
+   *  1. Always ensure that your Heap is a complete binary tree
+   *  2. All parent.val <= children if its a min heap
+   */
   insert(val) {
-    /** To maintain 1st condition element is added always at the last in heap */ 
+    /** To maintain 1st condition element is added always at the last in heap */
     this.values.push(val);
     this.bubbleUp();
     return this.values;
   }
 
-   /** This process is also called Heapify */
-   bubbleUp() {
-      let idx = this.values.length - 1;
-      let element = this.values[idx];
-       while(idx > 0) {
-         /* parent will always be at (n-1)/2 */
-         /* child is at 2n+1 and 2n+2 */
-         let parentIdx = Math.floor((idx - 1)/2);
-         let parent = this.values[parentIdx];
-         if(element <= parent) break;
-         this.values[parentIdx] = element;
-         this.values[idx] = parent;
-         idx = parentIdx;
-       }
-   }
+  /** This process is also called Heapify */
+  bubbleUp() {
+    let idx = this.values.length - 1;
+    let element = this.values[idx];
+    while (idx > 0) {
+      /* parent will always be at (n-1)/2 */
+      /* child is at 2n+1 and 2n+2 */
+      let parentIdx = Math.floor((idx - 1) / 2);
+      let parent = this.values[parentIdx];
+      if (element <= parent) break;
+      this.values[parentIdx] = element;
+      this.values[idx] = parent;
+      idx = parentIdx;
+    }
+  }
 
   /** 
    * Extraction always happen from the top to maintain the core structure of the Heap
@@ -133,17 +133,39 @@ class MaxBinaryHeap {
    * 3. Reduce the size of the heap
    * 4. Heapify Down
    * 5. Repeat the steps 2 to 4 until array is sorted
-  */  
-  Sort(arr){
-     // Step 1: Create a max heap
-     // run a lopp from back to front
-      for(let i=n-1; i>=0; i--){
-         heapifyDown(arr, i)
+  */
+  /** We follow below steps:
+   * 1. Create a max heap of the unsorted array
+   * 2. Swap the first and last value 
+   * 3. Reduce the size of the heap
+   * 4. Heapify Down
+   * 5. Repeat the steps 2 to 4 until array is sorted
+  */
+  Sort(arr) {
+    let arrSize = arr.length;
+    // Step 1: Create a max heap
+    // run a lopp from back to front
+    for (let i = n - 1; i >= 0; i--) {
+      heapifyDown(arr, i)
+    }
+
+    function heapifyDown(arr, largestIdx) {
+      let leftChildIdx = (2 * idx) + 1;
+      let rightChildIdx = (2 * i) + 2;
+      let swap = null;
+      if (leftChildIdx < arrSize && arr[leftChildIdx] > arr[largestIdx]) {
+        swap = leftChildIdx;
       }
 
-      function heapifyDown()
+      if (rightChildIdx < arrSize && arr[rightChildIdx] > arr[largestIdx]) {
+        swap = rightChildIdx;
+      }
+      if (!swap) return;
+      [arr[largestIdx], arr[i]] = [arr[swap], arr[largestIdx]]
+      heapifyDown(arr, swap);
+    }
   }
-   
+
 }
 
 let maxBinaryHeap = new MaxBinaryHeap();
