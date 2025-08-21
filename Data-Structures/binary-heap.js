@@ -126,6 +126,18 @@ class MaxBinaryHeap {
 
     return maxElement;
   }
+
+  /** We follow below steps:
+   * 1. Create a max heap of the unsorted array
+   * 2. Swap the first and last value 
+   * 3. Reduce the size of the heap
+   * 4. Heapify Down
+   * 5. Repeat the steps 2 to 4 until array is sorted
+  */  
+  Sort(arr){
+     
+  }
+   
 }
 
 let maxBinaryHeap = new MaxBinaryHeap();
