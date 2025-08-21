@@ -135,7 +135,13 @@ class MaxBinaryHeap {
    * 5. Repeat the steps 2 to 4 until array is sorted
   */  
   Sort(arr){
-     
+     // Step 1: Create a max heap
+     // run a lopp from back to front
+      for(let i=n-1; i>=0; i--){
+         heapifyDown(arr, i)
+      }
+
+      function heapifyDown()
   }
    
 }
