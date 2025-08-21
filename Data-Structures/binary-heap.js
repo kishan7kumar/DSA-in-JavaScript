@@ -86,6 +86,12 @@ class MaxBinaryHeap {
        }
    }
 
+  /** 
+   * Extraction always happen from the top to maintain the core structure of the Heap
+   * and we pop out last element and subsitute it with the root element, The tree
+   * becomes unbalanced which means it will not be min or max heap depending on what it was originally.
+   * Hence we will have to heapify down
+  */
   extractMax() {
     /* Swap the root and the last element */
     let maxElement = this.values[0];
